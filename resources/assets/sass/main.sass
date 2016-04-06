@@ -1,0 +1,102 @@
+@import "bourbon/_bourbon"
+@import "default/_normalize"
+
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@import "default/_base-styles"
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+@import "default/_browser-upgrade"
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@import "materialize"
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+@import "default/_helper-classes"
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+// @media only screen and (min-width: em( 320, 16 ))
+
+/* ==========================================================================
+  iPhone 5/5S Orientation
+  ========================================================================== */
+//@media only screen and (min-width: em( 320, 16 )) and (max-width: em( 568, 16 ))
+@media only screen and (min-width: em( 320, 16 ))
+
+// @media only screen and (min-width: em( 568, 16 )) and (max-width: em( 1023, 16 )) and (orientation: landscape)
+
+/* ==========================================================================
+  iPhone 6 Orientations
+  ========================================================================== */
+// @media only screen and (min-width: em( 375, 16 )) and (max-width: em( 1023, 16 ))
+
+// @media only screen and (min-width: em( 667, 16 )) and (max-width: em( 1023, 16 )) and (orientation: landscape)
+
+/* ==========================================================================
+  iPhone 6 Plus Orientation
+  ========================================================================== */
+// @media only screen and (min-width: em( 414, 16 )) and (max-width: em( 1023, 16 ))
+
+// @media only screen and (min-width: em( 736, 16 )) and (max-width: em( 1023, 16 )) and (orientation: landscape)
+
+/* ==========================================================================
+  iPad Orientation
+  ========================================================================== */
+@media only screen and (min-width: em( 768, 16 )) and (max-width: em( 1023, 16 ))
+  // @import "custom-styles/tablet/international-portrait.sass"
+
+@media only screen and (min-width: em( 1024, 16 ))
+  // @import "custom-styles/tablet/international-landscape.sass"
+
+/* ==========================================================================
+  Desktop High Resolution
+  ========================================================================== */
+@media only screen and (min-width: em( 1025, 16 ))
+  // @import "custom-styles/desktop/international.sass"
+
+/* ==========================================================================
+  Desktop High Resolution
+  ========================================================================== */
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi)
+  /* Style adjustments for high resolution devices */
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print
+  @import "default/_print-styles"
+
+

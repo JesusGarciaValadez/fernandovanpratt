@@ -10,9 +10,10 @@
       <h1>@lang( 'theme.home.principal.title' )</h1>
       <h2>@lang( 'theme.home.principal.description' )</h2>
       <p>
-        {!!
-        <a href="{{ route( 'hireMe' ) }}" target="_blank" class="button" title="@lang( 'theme.general.hire_me' )">@lang( 'theme.general.hire_me' )</a>
-        }
+        {!! Html::link( route( 'hireMe' ), trans( 'theme.general.hire_me' ), [
+          'target' => '_self',
+          'title' => trans( 'theme.general.hire_me' )
+        ] ) !!}
       </p>
     </div>
   </div>

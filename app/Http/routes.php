@@ -46,3 +46,21 @@ Route::group( [ 'middleware' => [ 'web' ] ], function ( )
 
   Route::auth();
 } );
+
+Route::get( 'enviar', [ 'as' => 'enviar', function ()
+{
+  $data = [ 'link' => 'http://www.fernandovanpratt.com/' ];
+
+
+  $response = \Mail::send( 'emails.notifications', $data, function ( $message )
+  {
+    $message->from( 'email@styde.net', 'Styde.Net' );
+
+    $message->to( 'jesus.garciav@me.com' )->subject( 'Notificación' );
+  } );
+
+  if ( $response )
+  {
+    return "Se envió el email.";
+  }
+} ] );

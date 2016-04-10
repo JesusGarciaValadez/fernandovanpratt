@@ -1,6 +1,7 @@
 /vendor
 /node_modules
 /public/storage
+/storage/email-previews/
 Homestead.yaml
 Homestead.json
 .env

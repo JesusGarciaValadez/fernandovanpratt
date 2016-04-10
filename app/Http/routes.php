@@ -43,6 +43,4 @@ Route::group( [ 'middleware' => [ 'web' ] ], function ( )
     'as' => 'store',
     'uses' => 'HireMeController@store'
   ] );
-
-  Route::auth();
 } );

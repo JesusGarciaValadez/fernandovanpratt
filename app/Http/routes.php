@@ -21,6 +21,18 @@ Route::get( 'gallery', [
   'uses'  => 'GalleryController@index'
 ] );
 
+Route::get( 'email', function () {
+  $data = [ 'email' => 'us@example.com' ];
+
+  $response = \Mail::send( 'emails.welcome', $data, function ( $message ) {
+    $message->from( 'us@example.com', 'Laravel' );
+
+    $message->to( 'foo@example.com' )->cc( 'bar@example.com' );
+  } );
+
+  return "Correo enviado";
+} );
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

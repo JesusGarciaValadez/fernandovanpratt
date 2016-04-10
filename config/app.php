@@ -159,7 +159,8 @@ return [
         /*
          * Custom Service Providers
          */
-        Collective\Html\HtmlServiceProvider::class
+        Collective\Html\HtmlServiceProvider::class,
+        Themsaid\MailPreview\MailPreviewServiceProvider::class
 
     ],
 
@@ -212,6 +213,7 @@ return [
          */
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
+
     ],
 
 ];

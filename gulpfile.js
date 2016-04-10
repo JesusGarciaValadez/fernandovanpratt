@@ -86,14 +86,17 @@ gulp.task( 'js-sync', [ 'compress' ], function ( ) {
   sync.reload();
 } );
 
+/**
+ * Using BrowserSync to live reload the browser injecting all the changes into the browser
+ */
 gulp.task( 'browsersync', [ 'compress', 'style' ], function ( ) {
   sync.init( {
-    proxy: "local.fernandovanpratt.com",
+    proxy: "https://local.fernandovanpratt.com",
     browser: [
       "firefox",
-      "google chrome"
-    ]
-    /*&server: {
+      //"google chrome"
+    ],
+    /*server: {
       baseDir: "./"
     }*/
   } );
@@ -115,6 +118,13 @@ gulp.task( 'browsersync', [ 'compress', 'style' ], function ( ) {
  */
 
 elixir( function ( mix ) {
-    mix.sass( 'app.scss' );
+    mix.sass( 'main.sass', 'public/assets/css/main.css' );
+
+    mix.scripts( [
+      "jquery.js",
+      "main.js"
+    ], 'public/assets/js/main.js' );
+
+    mix.version( [ 'public/assets/css/main.css', 'public/assets/js/main.js' ] );
 } );
 

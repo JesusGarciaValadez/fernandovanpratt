@@ -1,7 +1,9 @@
 /vendor
 /node_modules
 /public/storage
-/storage/email-previews/
+/public/build
+/storage/email-previews
+/resources/assets/sass/bourbon
 Homestead.yaml
 Homestead.json
 .env
@@ -10,3 +12,4 @@ Homestead.json
 config.codekit
 .sass-cache
 local.fernandovanpratt.com.*
+rev-manifest.json

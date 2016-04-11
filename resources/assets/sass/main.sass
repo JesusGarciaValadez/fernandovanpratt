@@ -27,7 +27,21 @@
    Author's custom styles
    ========================================================================== */
 
+@import "components/mixins"
+@import "components/color"
+
+// Variables;
+@import "components/variables"
+
+// Reset
+@import "components/normalize"
+
+// components
+@import "default/_colors"
+@import "default/_mixins"
+
 @import "materialize"
+@import "components/ghpages-materialize.css"
 
 
 /* ==========================================================================
@@ -49,7 +63,8 @@
   iPhone 5/5S Orientation
   ========================================================================== */
 //@media only screen and (min-width: em( 320, 16 )) and (max-width: em( 568, 16 ))
-//@media only screen and (min-width: em( 320, 16 ))
+@media only screen and (min-width: em( 320, 16 ))
+  @import "custom/mobile/mobile"
 
 // @media only screen and (min-width: em( 568, 16 )) and (max-width: em( 1023, 16 )) and (orientation: landscape)
 

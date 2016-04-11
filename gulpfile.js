@@ -46,9 +46,9 @@ gulp.task( 'style', function ( ) {
 
 gulp.task( 'concat', function ( ) {
   return gulp.src( [
-    config.jsDir + '/start.js',
-    config.jsDir + '/main.js',
-    config.jsDir + '/end.js'
+    config.jsDir + '/jquery.js',
+    config.jsDir + '/materialize.js',
+    config.jsDir + '/main.js'
   ] )
              .pipe( concat( 'scripts.js' ) )
              .pipe( gulp.dest( config.jsDir ) );
@@ -58,7 +58,7 @@ gulp.task( 'compress', [ 'concat' ], function ( ) {
   return gulp.src( config.jsDir + '/scripts.js' )
              .pipe( gulpif( isProduction, uglify() ) )
              .on( 'error', console.error.bind( console ) )
-             .pipe( gulpif( isProduction, gulp.dest( config.jsDir + '/scripts.min.js') ) )
+             .pipe( gulpif( isProduction, gulp.dest( 'public/assets/js/main.min.js') ) )
 } );
 
 gulp.task( 'imagemin', function () {
@@ -122,9 +122,15 @@ elixir( function ( mix ) {
 
     mix.scripts( [
       "jquery.js",
+      "materialize.js",
       "main.js"
     ], 'public/assets/js/main.js' );
 
     mix.version( [ 'public/assets/css/main.css', 'public/assets/js/main.js' ] );
+
+    mix.browserSync( {
+      proxy: 'https://local.fernandovanpratt.com',
+      browser: [ "firefox" ]
+    } );
 } );
 

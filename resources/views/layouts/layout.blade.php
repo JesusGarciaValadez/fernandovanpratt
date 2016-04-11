@@ -14,7 +14,7 @@
     {!! Html::style( 'humans.txt', [ 'type' => 'text/plain', 'rel' => 'author' ] ) !!}
     {!! Html::favicon( 'favicon.png' ) !!}
 
-    {!! Html::style( elixir( 'assets/css/main.css' ) ) !!}
+    {!! Html::style( 'assets/css/main.css' ) !!}
 
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,11 +32,13 @@
   </head>
   <body>
   @section( 'header' )
-    <header>
-      <a class="button-collapse top-nav full hide-on-large-only" data-activates="nav-mobile" href="#">
-        <i class="material-icons">menu</i>
-        <p class="title">FernandoVanPratt</p>
-        <nav>
+    <header class="">
+      <div class="valign-wrapper container">
+        <a class="button-collapse top-nav full hide-on-large-only" data-activates="nav-mobile" href="#">
+          <em class="material-icons">menu</em>
+        </a>
+        <p class="title valign center-align"><a href="{{ route( 'home' ) }}" title="@lang( 'theme.general.home' )" target="_self"><em>Fernando<strong>VanPratt</strong></em></a></p>
+        <nav id="nav-mobile" class="side-nav fixed">
           <ul class="clearfix">
             <li>
               <p>
@@ -64,7 +66,8 @@
             </li>
           </ul>
         </nav>
-      </a>
+      </div>
+      <div class="blur"></div>
     </header>
   @show
 
@@ -86,7 +89,7 @@
   @show
 
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-    {!! Html::script( elixir( 'assets/js/main.js' ) ) !!}
+    <!--script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script-->
+    {!! Html::script( 'assets/js/main.js' ) !!}
   </body>
 </html>

@@ -16770,4 +16770,3 @@ Picker.extend( 'pickadate', DatePicker )
 
   $('.parallax').parallax();
 } )( jQuery );
-//# sourceMappingURL=main.js.map
